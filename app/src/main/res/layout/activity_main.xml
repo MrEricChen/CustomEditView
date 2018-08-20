@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eric.demo.MainActivity">
+
+    <com.mrericchen.customeditview.CustomEditView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        app:edStrokeColor="@color/colorAccent"
+        app:etRadius="5dp"
+        app:etStrokeWidth="1dp"
+        app:clearButtonMode="whileEditing"
+        android:foregroundGravity="center_vertical"
+        app:clearButtonDrawable="@mipmap/icon_close_black"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
