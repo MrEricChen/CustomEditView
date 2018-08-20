@@ -1,8 +1,4 @@
----
-title: 2018-8-20未命名文件 
-tags: 新建,模板,小书匠
-grammar_cjkRuby: true
----
+
 ## 前言
 为避免频繁在drawable包下创建shape来实现EditText修改背景框(圆角、直角、线条颜色以及粗细)，节省res资源的创建，自定义EditText来实现相应的效果，并且为之添加可自定义的删除图片
 
@@ -10,7 +6,8 @@ grammar_cjkRuby: true
 
 ``` stylus
 
-<!-- 清除按钮显示模式 -->
+    <declare-styleable name="CustomEditView">
+        <!-- 清除按钮显示模式 -->
         <attr name="clearButtonMode">
             <!--不显示清空按钮-->
             <enum name="never" value="0" />
@@ -35,7 +32,28 @@ grammar_cjkRuby: true
         <attr name="etLeftBottomRadius" format="dimension" />
         <attr name="etRightTopRadius" format="dimension" />
         <attr name="etRightBottomRadius" format="dimension" />
+    </declare-styleable>
 		
+```
+
+## 代码参考
+导入Module，布局xml里引入控件
+``` stylus
+
+    <com.mrericchen.customeditview.CustomEditView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text="111111"
+        app:edStrokeColor="@color/colorAccent"
+        app:etRadius="5dp"
+        app:etStrokeWidth="1dp"
+        app:clearButtonMode="whileEditing"
+        android:foregroundGravity="center_vertical"
+        app:clearButtonDrawable="@mipmap/icon_close_black"
+        app:layout_constraintTop_toTopOf="parent" />
+
 ```
 
 ## 图例
